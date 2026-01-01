@@ -1,0 +1,50 @@
+/* savat.css */
+
+.cart-items-list {
+    min-height: 300px;
+}
+
+.cart-item-card {
+    transition: all 0.3s ease;
+    border: 1px solid #eee !important;
+}
+
+.cart-item-card:hover {
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05) !important;
+}
+
+.cart-summary-card {
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    position: sticky;
+    top: 100px;
+}
+
+.summary-details span {
+    color: #666;
+}
+
+.input-group input {
+    max-width: 60px;
+    font-weight: bold;
+}
+
+.input-group .btn {
+    padding: 0.25rem 0.75rem;
+}
+
+.empty-cart-message i {
+    color: #dee2e6;
+}
+
+@media (max-width: 768px) {
+    .cart-summary-card {
+        position: static;
+        margin-top: 2rem;
+    }
+
+    .cart-item-card img {
+        max-width: 100%;
+    }
+}

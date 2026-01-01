@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="uz">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Xizmatlar - Tech House</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="./css/xizmatlar.css">
+</head>
+
+<body>
+    <!-- Header -->
+    <header>
+        <nav>
+            <a href="./index.html" class="logo">Tech House</a>
+            <ul class="nav-links">
+                <li><a href="./index.html#home">Bosh sahifa</a></li>
+                <li><a href="./xizmatlar.html">Xizmatlar</a></li>
+                <li><a href="./aksiyalar.html">Aksiyalar</a></li>
+                <li><a href="./boglanish.html">Bog'lanish</a></li>
+            </ul>
+            <div class="header-actions">
+
+                <a href="./savat.html" class="cart-icon">
+                    <span><i class="bi bi-cart-plus"></i></span>
+                    <span class="cart-count">0</span>
+                </a>
+                <a href="./auth.html" class="menu-icon">
+                    <span><i class="bi bi-person-circle"></i></span>
+                </a>
+                <button class="mobile-nav-toggle">
+                    <i class="bi bi-list"></i>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Services Section -->
+    <section id="services" class="services-section">
+        <div class="container">
+            <h2>Bizning Xizmatlar</h2>
+            <p class="section-subtitle">Tech House - nafaqat mahsulot, balki to'liq xizmat!</p>
+
+            <div class="services-grid">
+                <!-- Service 1 -->
+                <div class="service-card">
+                    <div class="service-icon">🚚</div>
+                    <h3>Yetkazib Berish</h3>
+                    <p>Toshkent bo'ylab tez va ishonchli yetkazib berish xizmati. 3,000,000 so'mdan ortiq xaridlarga
+                        bepul!
+                    </p>
+                    <ul class="service-features">
+                        <li>✓ Toshkent bo'ylab 1-2 kun ichida</li>
+                        <li>✓ Viloyatlarga 3-5 kun ichida</li>
+                        <li>✓ Vaqtni o'zingiz tanlang</li>
+                        <li>✓ SMS orqali kuzatish</li>
+                    </ul>
+                    <a href="#delivery-modal" class="btn-service">Batafsil</a>
+                </div>
+
+                <!-- Service 2 -->
+                <div class="service-card featured">
+                    <div class="featured-badge">Mashhur</div>
+                    <div class="service-icon">🔧</div>
+                    <h3>O'rnatish va Ulanish</h3>
+                    <p>Malakali mutaxassislar tomonidan professional o'rnatish va sozlash xizmati.</p>
+                    <ul class="service-features">
+                        <li>✓ Muzlatgich, konditsioner o'rnatish</li>
+                        <li>✓ Kir yuvish mashinasi ulanish</li>
+                        <li>✓ Idish yuvish ulanish</li>
+                        <li>✓ Texnika sozlash va test</li>
+                    </ul>
+                    <a href="#installation-modal" class="btn-service">Batafsil</a>
+                </div>
+
+                <!-- Service 3 -->
+                <div class="service-card">
+                    <div class="service-icon">🛡️</div>
+                    <h3>Kafolat va Ta'mirlash</h3>
+                    <p>Barcha mahsulotlarga rasmiy kafolat. Tez va sifatli ta'mirlash xizmati.</p>
+                    <ul class="service-features">
+                        <li>✓ 12-36 oy kafolat</li>
+                        <li>✓ Bepul diagnostika</li>
+                        <li>✓ Asl ehtiyot qismlar</li>
+                        <li>✓ Tezkor ta'mirlash</li>
+                    </ul>
+                    <a href="#warranty-modal" class="btn-service">Batafsil</a>
+                </div>
+
+                <!-- Service 4 -->
+                <div class="service-card">
+                    <div class="service-icon">💳</div>
+                    <h3>Muddatli To'lov</h3>
+                    <p>Qulay shartlarda muddatli to'lov imkoniyati. Hech qanday ustama to'lovsiz!</p>
+                    <ul class="service-features">
+                        <li>✓ 3, 6, 12, 24 oy muddat</li>
+                        <li>✓ 0% foizsiz</li>
+                        <li>✓ Minimal hujjatlar</li>
+                        <li>✓ Tezkor rasmiylashtirish</li>
+                    </ul>
+                    <a href="#installment-modal" class="btn-service">Batafsil</a>
+                </div>
+
+                <!-- Service 5 -->
+                <div class="service-card">
+                    <div class="service-icon">🔄</div>
+                    <h3>Trade-In (Almashtirish)</h3>
+                    <p>Eski texnikangizni yangi mahsulot xaridida chegirma sifatida topshiring.</p>
+                    <ul class="service-features">
+                        <li>✓ Tezkor baholash</li>
+                        <li>✓ Adolatli narx</li>
+                        <li>✓ Har qanday holat</li>
+                        <li>✓ Bir kunda rasmiylashtirish</li>
+                    </ul>
+                    <a href="#tradein-modal" class="btn-service">Batafsil</a>
+                </div>
+
+                <!-- Service 6 -->
+                <div class="service-card">
+                    <div class="service-icon">👨‍🔧</div>
+                    <h3>Texnik Maslahat</h3>
+                    <p>Mutaxassis maslahatchilar texnika tanlashda yordam beradi va savollaringizga javob beradi.</p>
+                    <ul class="service-features">
+                        <li>✓ Bepul maslahat</li>
+                        <li>✓ Professional yondashuv</li>
+                        <li>✓ Telefon/onlayn</li>
+                        <li>✓ 24/7 qo'llab-quvvatlash</li>
+                    </ul>
+                    <a href="#consultation-modal" class="btn-service">Batafsil</a>
+                </div>
+            </div>
+
+            <!-- Additional Services -->
+            <div class="additional-services">
+                <h3>Qo'shimcha Xizmatlar</h3>
+                <div class="additional-grid">
+                    <div class="additional-card">
+                        <span class="additional-icon">📦</span>
+                        <h4>Eski Texnikani Utilizatsiya</h4>
+                        <p>Eski texnikani ekologik xavfsiz utilizatsiya qilish</p>
+                    </div>
+                    <div class="additional-card">
+                        <span class="additional-icon">🧹</span>
+                        <h4>Tozalash va Parvarish</h4>
+                        <p>Texnikani professional tozalash va texnik xizmat</p>
+                    </div>
+                    <div class="additional-card">
+                        <span class="additional-icon">📚</span>
+                        <h4>O'qitish va Yo'riqnoma</h4>
+                        <p>Mahsulotdan to'g'ri foydalanish bo'yicha o'rgatish</p>
+                    </div>
+                    <div class="additional-card">
+                        <span class="additional-icon">🎁</span>
+                        <h4>Sovg'a O'rash</h4>
+                        <p>Bayram uchun chiroyli sovg'a qadoqlash xizmati</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Service Pricing Table -->
+            <div class="pricing-section">
+                <h3>Xizmatlar Narxlari</h3>
+                <div class="pricing-table">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Xizmat</th>
+                                <th>Tavsif</th>
+                                <th>Narx</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Yetkazib berish (Toshkent)</td>
+                                <td>Standart yetkazib berish</td>
+                                <td>150,000 so'm</td>
+                            </tr>
+                            <tr>
+                                <td>Muzlatgich o'rnatish</td>
+                                <td>O'rnatish, ulanish, sozlash</td>
+                                <td>200,000 so'm</td>
+                            </tr>
+                            <tr>
+                                <td>Konditsioner o'rnatish</td>
+                                <td>Standart o'rnatish (5m gacha)</td>
+                                <td>500,000 so'm</td>
+                            </tr>
+                            <tr>
+                                <td>Kir yuvish ulanish</td>
+                                <td>Suv va kanalizatsiya ulanish</td>
+                                <td>150,000 so'm</td>
+                            </tr>
+                            <tr>
+                                <td>Idish yuvish ulanish</td>
+                                <td>To'liq ulanish va test</td>
+                                <td>180,000 so'm</td>
+                            </tr>
+                            <tr>
+                                <td>Texnika tozalash</td>
+                                <td>Ichki va tashqi tozalash</td>
+                                <td>100,000 so'm</td>
+                            </tr>
+                            <tr>
+                                <td>Utilizatsiya</td>
+                                <td>Eski texnikani olib ketish</td>
+                                <td>Bepul*</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <p class="pricing-note">* Yangi texnika xaridida</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Service Modals -->
+    <!-- Delivery Modal -->
+    <div id="delivery-modal" class="service-modal modal">
+        <div class="modal-content">
+            <span class="close-service-modal">&times;</span>
+            <h2>🚚 Yetkazib Berish Xizmati</h2>
+            <div class="service-modal-content">
+                <h3>Yetkazib Berish Shartlari</h3>
+                <ul>
+                    <li><strong>Toshkent shahri:</strong> 1-2 ish kuni ichida, 150,000 so'm</li>
+                    <li><strong>Toshkent viloyati:</strong> 2-3 ish kuni ichida, 200,000 so'm</li>
+                    <li><strong>Boshqa viloyatlar:</strong> 3-5 ish kuni ichida, 250,000 so'm</li>
+                    <li><strong>Bepul yetkazish:</strong> 3,000,000 so'mdan ortiq xaridlarga</li>
+                </ul>
+
+                <h3>Yetkazish Jarayoni</h3>
+                <ol>
+                    <li>Buyurtma tasdiqlangandan keyin SMS xabar keladi</li>
+                    <li>Kuryer sizga 1 soat oldin qo'ng'iroq qiladi</li>
+                    <li>Mahsulotni tekshirib ko'ring</li>
+                    <li>Hujjatlarni imzolang</li>
+                    <li>To'lovni amalga oshiring</li>
+                </ol>
+
+                <h3>Muhim Ma'lumotlar</h3>
+                <p>• Mahsulotlar asl qadoqda yetkaziladi</p>
+                <p>• Yetkazish vaqtini o'zingiz tanlaysiz</p>
+                <p>• Katta texnika uchun ko'tarish xizmati (1,000 so'm/qavat)</p>
+                <p>• To'lov: naqd yoki terminal orqali</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Installation Modal -->
+    <div id="installation-modal" class="service-modal modal">
+        <div class="modal-content">
+            <span class="close-service-modal">&times;</span>
+            <h2>🔧 O'rnatish va Ulanish Xizmati</h2>
+            <div class="service-modal-content">
+                <h3>O'rnatish Xizmatlari</h3>
+
+                <h4>Konditsioner O'rnatish</h4>
+                <ul>
+                    <li>Devorga o'rnatish</li>
+                    <li>Teshiq ochish (betonda/g'ishtda)</li>
+                    <li>Drenaj o'rnatish</li>
+                    <li>Elektr ulanish va sozlash</li>
+                    <li>Test va ishga tushirish</li>
+                    <li>Narx: 500,000 so'mdan</li>
+                </ul>
+
+                <h4>Kir Yuvish Mashinasi</h4>
+                <ul>
+                    <li>Suv ta'minoti ulanish</li>
+                    <li>Kanalizatsiya ulanish</li>
+                    <li>Elektr ulanish</li>
+                    <li>Tekislash va test</li>
+                    <li>Narx: 150,000 so'm</li>
+                </ul>
+
+                <h4>Muzlatgich</h4>
+                <ul>
+                    <li>Joylashtirish va tekislash</li>
+                    <li>Elektr ulanish</li>
+                    <li>Ishga tushirish va sozlash</li>
+                    <li>Narx: 200,000 so'm</li>
+                </ul>
+
+                <h3>Kafolat</h3>
+                <p>O'rnatish ishlariga 12 oy kafolat beriladi. Agar muammo bo'lsa, bepul qayta o'rnatamiz.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Warranty Modal -->
+    <div id="warranty-modal" class="service-modal modal">
+        <div class="modal-content">
+            <span class="close-service-modal">&times;</span>
+            <h2>🛡️ Kafolat va Ta'mirlash</h2>
+            <div class="service-modal-content">
+                <h3>Kafolat Shartlari</h3>
+                <ul>
+                    <li>Kichik maishiy texnika: 12 oy</li>
+                    <li>Katta maishiy texnika: 24 oy</li>
+                    <li>Premium brendlar: 36 oy</li>
+                </ul>
+
+                <h3>Kafolat Qamrab Oladi</h3>
+                <ul>
+                    <li>✓ Ishlab chiqarish nuqsonlari</li>
+                    <li>✓ Bepul diagnostika</li>
+                    <li>✓ Asl ehtiyot qismlar</li>
+                    <li>✓ Malakali ustalar</li>
+                    <li>✓ Uyga chiqish (kerak bo'lsa)</li>
+                </ul>
+
+                <h3>Ta'mirlash Jarayoni</h3>
+                <ol>
+                    <li>Murojaat qiling: +998 90 123 45 67</li>
+                    <li>Muammoni tasvirlab bering</li>
+                    <li>Usta tayinlanadi</li>
+                    <li>Tashxis qo'yiladi</li>
+                    <li>Ta'mirlash amalga oshiriladi</li>
+                    <li>3-5 kun ichida tayyor</li>
+                </ol>
+
+                <h3>Kafolatdan Tashqari</h3>
+                <p>Kafolat mexanik shikastlanish, noto'g'ri foydalanish yoki ruxsatsiz ta'mirlashni qamrab olmaydi.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Installment Modal -->
+    <div id="installment-modal" class="service-modal modal">
+        <div class="modal-content">
+            <span class="close-service-modal">&times;</span>
+            <h2>💳 Muddatli To'lov</h2>
+            <div class="service-modal-content">
+                <h3>Muddatli To'lov Shartlari</h3>
+
+                <div class="installment-plans">
+                    <div class="plan-card">
+                        <h4>3 Oylik</h4>
+                        <p class="plan-interest">0% Foiz</p>
+                        <p>Minimal: 1,000,000 so'm</p>
+                    </div>
+                    <div class="plan-card">
+                        <h4>6 Oylik</h4>
+                        <p class="plan-interest">0% Foiz</p>
+                        <p>Minimal: 2,000,000 so'm</p>
+                    </div>
+                    <div class="plan-card popular">
+                        <span class="popular-badge">Mashhur</span>
+                        <h4>12 Oylik</h4>
+                        <p class="plan-interest">0% Foiz</p>
+                        <p>Minimal: 3,000,000 so'm</p>
+                    </div>
+                    <div class="plan-card">
+                        <h4>24 Oylik</h4>
+                        <p class="plan-interest">5% Foiz</p>
+                        <p>Minimal: 5,000,000 so'm</p>
+                    </div>
+                </div>
+
+                <h3>Kerakli Hujjatlar</h3>
+                <ul>
+                    <li>✓ Passport (asl nusxa)</li>
+                    <li>✓ Ish joyi ma'lumotnomasi</li>
+                    <li>✓ INN raqami</li>
+                    <li>✓ Dastlabki to'lov (20% dan)</li>
+                </ul>
+
+                <h3>Rasmiylashtirish</h3>
+                <p>Muddatli to'lov 30 daqiqa ichida rasmiylashtiriladi. Hamkor banklar: Ipoteka Bank, Agrobank, Xalq
+                    Banki.
+                </p>
+
+                <h3>Misol</h3>
+                <p><strong>Mahsulot narxi:</strong> 10,000,000 so'm</p>
+                <p><strong>Dastlabki to'lov (20%):</strong> 2,000,000 so'm</p>
+                <p><strong>Oylik to'lov (12 oy):</strong> 666,667 so'm</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Trade-in Modal -->
+    <div id="tradein-modal" class="service-modal modal">
+        <div class="modal-content">
+            <span class="close-service-modal">&times;</span>
+            <h2>🔄 Trade-In (Almashtirish)</h2>
+            <div class="service-modal-content">
+                <h3>Trade-In Nima?</h3>
+                <p>Eski texnikangizni bizga topshiring va yangi mahsulot xaridida chegirma oling!</p>
+
+                <h3>Qanday Ishlaydi?</h3>
+                <ol>
+                    <li>Eski texnikangiz haqida ma'lumot bering</li>
+                    <li>Biz narxini baholaymiz</li>
+                    <li>Yangi mahsulot tanlang</li>
+                    <li>Farqni to'lang</li>
+                    <li>Eski texnikani biz olib ketamiz</li>
+                </ol>
+
+                <h3>Qabul Qilinadigan Texnika</h3>
+                <ul>
+                    <li>✓ Muzlatgichlar</li>
+                    <li>✓ Kir yuvish mashinalari</li>
+                    <li>✓ Konditsionerlar</li>
+                    <li>✓ Televizorlar</li>
+                    <li>✓ Mikroto'lqinli pechlar</li>
+                    <li>✓ Changyutgichlar</li>
+                </ul>
+
+                <h3>Baholash Mezonlari</h3>
+                <ul>
+                    <li>Texnika yoshi</li>
+                    <li>Ish holati</li>
+                    <li>Tashqi ko'rinishi</li>
+                    <li>Brend va model</li>
+                    <li>Komplektligi</li>
+                </ul>
+
+                <h3>Misol</h3>
+                <p><strong>Eski muzlatgich:</strong> 2,000,000 so'm baholanadi</p>
+                <p><strong>Yangi muzlatgich:</strong> 8,500,000 so'm</p>
+                <p><strong>To'lanadi:</strong> 6,500,000 so'm</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Consultation Modal -->
+    <div id="consultation-modal" class="service-modal modal">
+        <div class="modal-content">
+            <span class="close-service-modal">&times;</span>
+            <h2>👨‍🔧 Texnik Maslahat</h2>
+            <div class="service-modal-content">
+                <h3>Bepul Maslahat</h3>
+                <p>Bizning mutaxassis maslahatchilar sizga mos texnika tanlashda yordam beradi!</p>
+
+                <h3>Biz Qanday Yordam Beramiz?</h3>
+                <ul>
+                    <li>✓ Ehtiyojingizga mos mahsulot tanlash</li>
+                    <li>✓ Texnik xususiyatlarni tushuntirish</li>
+                    <li>✓ Narxlarni taqqoslash</li>
+                    <li>✓ Brendlarni tavsiya qilish</li>
+                    <li>✓ Energiya tejamkorligi haqida</li>
+                    <li>✓ Parvarishlash maslahatlari</li>
+                </ul>
+
+                <h3>Bog'lanish Yo'llari</h3>
+                <div class="contact-methods">
+                    <div class="method">
+                        <span class="method-icon">📞</span>
+                        <div>
+                            <strong>Telefon</strong>
+                            <p>+998 71 123 45 67</p>
+                            <p>Dush-Juma: 09:00-20:00</p>
+                        </div>
+                    </div>
+                    <div class="method">
+                        <span class="method-icon">✈️</span>
+                        <div>
+                            <strong>Telegram</strong>
+                            <p>@techhouse_uz</p>
+                            <p>24/7</p>
+                        </div>
+                    </div>
+                    <div class="method">
+                        <span class="method-icon">💬</span>
+                        <div>
+                            <strong>Onlayn Chat</strong>
+                            <p>Saytda</p>
+                            <p>09:00-22:00</p>
+                        </div>
+                    </div>
+                    <div class="method">
+                        <span class="method-icon">🏪</span>
+                        <div>
+                            <strong>Do'konlarimizda</strong>
+                            <p>Yunusobod, Chilonzor</p>
+                            <p>Har kuni</p>
+                        </div>
+                    </div>
+                </div>
+
+                <h3>Maslahat Olish</h3>
+                <form class="consultation-form">
+                    <input type="text" placeholder="Ismingiz" required>
+                    <input type="tel" placeholder="Telefon" required>
+                    <textarea placeholder="Qaysi texnika haqida maslahat kerak?" rows="3" required></textarea>
+                    <button type="submit" class="btn-primary">So'rov Yuborish</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>Tech House</h3>
+                    <p>O'zbekistondagi eng ishonchli uy jihozlari va maishiy texnika do'koni. Sifat va qulay narxlar
+                        kafolati!</p>
+                </div>
+                <div class="footer-col">
+                    <h3>Havolalar</h3>
+                    <ul>
+                        <li><a href="./index.html#home">Bosh sahifa</a></li>
+                        <li><a href="./index.html#products">Mahsulotlar</a></li>
+                        <li><a href="./aksiyalar.html">Aksiyalar</a></li>
+                        <li><a href="./boglanish.html">Bog'lanish</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Xizmatlar</h3>
+                    <ul>
+                        <li><a href="#">Yetkazib berish</a></li>
+                        <li><a href="#">O'rnatish xizmati</a></li>
+                        <li><a href="#">Kafolat</a></li>
+                        <li><a href="#">Qaytarish</a></li>
+                        <li><a href="#">To'lov usullari</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Qo'llab-quvvatlash</h3>
+                    <ul>
+                        <li><a href="#">Savol-Javob</a></li>
+                        <li><a href="#">Texnik yordam</a></li>
+                        <li><a href="#">Murojaat qoldirish</a></li>
+                        <li><a href="#">Ommaviy oferta</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Ijtimoiy tarmoqlar</h3>
+                    <div class="social-links">
+                        <a href="#"><i class="bi bi-facebook"></i></a>
+                        <a href="#"><i class="bi bi-instagram"></i></a>
+                        <a href="#"><i class="bi bi-telegram"></i></a>
+                        <a href="#"><i class="bi bi-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Tech House. Barcha huquqlar himoyalangan.</p>
+                <p>Uy jihozlari va maishiy texnika - sifat va ishonch kafolati!</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <script src="./js/script.js"></script>
+    <script src="./js/xizmatlar.js"></script>
+</body>
+
+</html>
