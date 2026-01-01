@@ -932,13 +932,21 @@ footer {
 
     .products-grid {
         grid-template-columns: repeat(2, 1fr);
-        gap: 15px;
+        gap: 20px;
+    }
+
+    @media (max-width: 576px) {
+        .products-grid {
+            grid-template-columns: 1fr;
+            max-width: 400px;
+            margin: 0 auto;
+        }
     }
 
     .product-card h3 {
-        font-size: 1rem;
-        min-height: 50px;
-        padding: 10px 10px 5px;
+        font-size: 1.1rem;
+        min-height: auto;
+        padding: 15px 15px 5px;
     }
 
     .product-description {

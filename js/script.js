@@ -13,6 +13,9 @@ const addToCartBtns = document.querySelectorAll('.btn-add-cart');
 
 // Sahifa yuklanganda
 document.addEventListener('DOMContentLoaded', function () {
+    if (document.getElementById('products-grid-container')) {
+        renderProducts();
+    }
     initializeEventListeners();
     updateCartDisplay();
 });
@@ -31,12 +34,12 @@ function initializeEventListeners() {
         });
     }
 
-    // Savatga qo'shish tugmalari
-    if (addToCartBtns) {
-        addToCartBtns.forEach(btn => {
-            btn.addEventListener('click', handleAddToCart);
-        });
-    }
+    // Savatga qo'shish tugmalari (Event delegation ishlatamiz)
+    document.addEventListener('click', function (e) {
+        if (e.target.classList.contains('btn-add-cart')) {
+            handleAddToCart(e);
+        }
+    });
 
     // Yetkazib berish o'zgarishi
     const deliveryRadios = document.querySelectorAll('input[name="delivery"]');
@@ -110,6 +113,37 @@ function updateCartDisplay() {
     }
 }
 
+// Mahsulotlarni sahifaga chiqarish
+function renderProducts(filteredProducts = null) {
+    const container = document.getElementById('products-grid-container');
+    if (!container) return;
+
+    const productsToRender = filteredProducts || products;
+
+    container.innerHTML = productsToRender.map(product => {
+        const oldPriceHtml = product.oldPrice ? `<span class="old-price">${formatPrice(product.oldPrice)} so'm</span>` : '';
+        const badgeHtml = product.badge ? `<div class="product-badge ${product.badge === 'sale' ? 'sale' : ''}">${product.badgeText || product.badge}</div>` : '';
+
+        return `
+            <div class="product-card" data-id="${product.id}" data-category="${product.category}">
+                ${badgeHtml}
+                <a href="./mahsulot.html?id=${product.id}">
+                    <img src="${product.image}" alt="${product.name}">
+                </a>
+                <a href="./mahsulot.html?id=${product.id}" style="text-decoration: none; color: inherit;">
+                    <h3>${product.name}</h3>
+                </a>
+                <p class="product-description">${product.description}</p>
+                <div class="product-price">
+                    ${oldPriceHtml}
+                    <span class="price">${formatPrice(product.price)} so'm</span>
+                </div>
+                <button class="btn-add-cart">Savatga qo'shish</button>
+            </div>
+        `;
+    }).join('');
+}
+
 // Narxni formatlash
 function formatPrice(price) {
     return price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
@@ -119,24 +153,18 @@ function formatPrice(price) {
 // Qidiruv funksiyasi
 function handleSearch(e) {
     const searchTerm = e.target.value.toLowerCase();
-    const productCards = document.querySelectorAll('.product-card');
 
-    productCards.forEach(card => {
-        const productName = card.querySelector('h3').textContent.toLowerCase();
-        const productDesc = card.querySelector('.product-description').textContent.toLowerCase();
+    const filteredProducts = products.filter(product =>
+        product.name.toLowerCase().includes(searchTerm) ||
+        product.description.toLowerCase().includes(searchTerm)
+    );
 
-        if (productName.includes(searchTerm) || productDesc.includes(searchTerm)) {
-            card.style.display = 'flex';
-        } else {
-            card.style.display = 'none';
-        }
-    });
+    renderProducts(filteredProducts);
 }
 
 // Kategoriya filtrlash
 function handleCategoryFilter(e) {
     const category = e.target.dataset.category;
-    const productCards = document.querySelectorAll('.product-card');
 
     // Barcha tugmalardan active classni olib tashlash
     categoryBtns.forEach(btn => btn.classList.remove('active'));
@@ -144,14 +172,12 @@ function handleCategoryFilter(e) {
     // Bosilgan tugmaga active class qo'shish
     e.target.classList.add('active');
 
-    // Mahsulotlarni filtrlash
-    productCards.forEach(card => {
-        if (category === 'all' || card.dataset.category === category) {
-            card.style.display = 'flex';
-        } else {
-            card.style.display = 'none';
-        }
-    });
+    // Mahsulotlarni filtrlash va qayta render qilish
+    const filteredProducts = category === 'all'
+        ? products
+        : products.filter(p => p.category === category);
+
+    renderProducts(filteredProducts);
 }
 
 // Bildirishnoma ko'rsatish
