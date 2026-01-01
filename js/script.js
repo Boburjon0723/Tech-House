@@ -126,7 +126,7 @@ function handleSearch(e) {
         const productDesc = card.querySelector('.product-description').textContent.toLowerCase();
 
         if (productName.includes(searchTerm) || productDesc.includes(searchTerm)) {
-            card.style.display = 'block';
+            card.style.display = 'flex';
         } else {
             card.style.display = 'none';
         }
@@ -147,7 +147,7 @@ function handleCategoryFilter(e) {
     // Mahsulotlarni filtrlash
     productCards.forEach(card => {
         if (category === 'all' || card.dataset.category === category) {
-            card.style.display = 'block';
+            card.style.display = 'flex';
         } else {
             card.style.display = 'none';
         }
